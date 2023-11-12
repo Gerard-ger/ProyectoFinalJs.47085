@@ -8,7 +8,7 @@ function Promocion(min,max,premio){
 //creo unas promos
 const promo1 = new Promocion(1000,10000, "Viaje a Mar del Plata");
 const promo2 = new Promocion(10000,100000, "Viaje a Brasil");
-const promo3 = new Promocion(100000,1000000, "Viaje al Caribe");
+const promo3 = new Promocion(100000,1000000000, "Viaje al Caribe");
 //armo una lista de promos
 const listaDePromos = [promo1,promo2,promo3];
 
