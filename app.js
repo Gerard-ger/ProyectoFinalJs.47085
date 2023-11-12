@@ -52,7 +52,15 @@ function Sorteo(monto){
 //BOTON CALCULAR
 //Creo evento a la espera de que le haga clic al boton Calcular
 let botonCalular = document.getElementById("btnCalcular");
-botonCalular.addEventListener("click",Prestamo);
+botonCalular.addEventListener('click', ()=>{
+    const principal = parseInt(document.getElementById('principal').value);
+    const interest = parseInt(document.getElementById('interest').value);
+    const meses = parseInt(document.getElementById('months').value);
+
+    if (principal && interest && meses) {
+        Prestamo()
+    }
+})
 
 function Prestamo(){
 // Obtener los valores del formulario
