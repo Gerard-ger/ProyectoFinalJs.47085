@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Préstamos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="cuadroDolar" id="cuadroDolar1">
+    </div>
+    <div class="cuadroDolar" id="cuadroDolar2">
+    </div>
+    <div class="calculator">
+        <h2>Calculadora de Préstamos</h2>
+        <form id="loan-form">
+            <label class="input-label" for="principal">Monto Principal:</label>
+            <input class="input-field" type="number" id="principal" placeholder="Monto principal" required>
+
+            <label class="input-label" for="interest">Tasa de Interés (%):</label>
+            <input class="input-field" type="number" id="interest" placeholder="Tasa de interés" required>
+
+            <label class="input-label" for="months">Plazo (en meses):</label>
+            <input class="input-field" type="number" id="months" placeholder="Plazo" required>
+            <br><br>
+            <button class="calculate-button" type="button" id="btnCalcular">Calcular</button>
+        </form>
+
+        <p class="result" id="result"></p>
+        <p class="result" id="premio"></p>
+    </div>
+
+    <form class="formulario_" id="formulario">
+        <div>
+            <h3>Datos de Clientes</h3>
+            <div class="form-control">
+                <label class="input-label" for="Nombre">Nombre de Cliente:</label>
+                <input class="input-field" type="text" id="nombreCliente" placeholder="Nombre" required>
+                <p></p>
+            </div>
+            <div class="form-control">
+                <label class="input-label" for="Mail">Mail:</label>
+                <input class="input-field" type="text" id="mail" placeholder="Mail" required>
+                <p></p>
+            </div>
+            <div class="form-control">
+                <label class="input-label" for="Telefono">Telefono:</label>
+                <input class="input-field" type="text" id="telefono" placeholder="Telefono" required>
+                <p></p>
+            </div>
+            <br><br>
+
+            <button type="submit" class="calculate-button" type="button" id="btnAgregar">Agregar</button>
+
+            <br><br>
+
+            <button class="calculate-button" type="button" id="btnMostrar">Mostrar listado</button>
+
+            <p class="result" id="clienteAgregado"></p>
+        </div>
+    </form>
+    <div class="tablaclientes" id="tablaClientes">
+        <ul class="result" id="ListadoDeClientes"></ul>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>

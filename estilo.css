@@ -1,0 +1,158 @@
+/* Estilos CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(151, 210, 207, 0.555);
+}
+
+
+/* Estilos para la calculadora */
+.calculator, .formulario_ {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+}
+
+.calculator h2, .Clientes h3 {
+    text-align: center;
+}
+
+.input-label {
+    display: block;
+    margin: 10px 0;
+}
+
+.input-field {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #fff; 
+    border: 1px solid #3498db; 
+}
+
+.calculate-button {
+    width: 100%;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para el formulario */
+.form-control {
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-weight: 200;
+}
+
+.form-control input {
+    border: 1px solid #3498db; 
+    background-color: #fff; 
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 90%;
+}
+
+.form-control, input:focus {
+    outline: none;
+}
+
+.form-control.ok input {
+    border: 1px solid #10a04c; 
+}
+
+.form-control.falla input {
+    border: 1px solid #e74c3c; 
+}
+
+.form-control p {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.form-control.falla p {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* Estilos para la tabla de clientes */
+.tablaclientes {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+}
+
+table {
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+thead {
+    background-color: #3498db;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover td {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Estilos para el cuadro de Dólar */
+.cuadroDolar {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+#cuadroDolar1 {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    background-color: #75bff0;
+}
+
+#cuadroDolar2 {
+    position: fixed;
+    top: 210px;
+    left: 10px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: #75bff0;
+}
