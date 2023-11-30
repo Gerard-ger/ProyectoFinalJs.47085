@@ -103,6 +103,7 @@ Toastify({
     text: `Se agrego el Cliente ${nombre}`,
     duration: 3000
     }).showToast();
+    
 
 //una vez que guardo los datos reseteo el formulario
 const form = document.querySelector('#formulario');
