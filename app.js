@@ -52,7 +52,10 @@ function Sorteo(monto){
 //BOTON CALCULAR
 //Creo evento a la espera de que le haga clic al boton Calcular
 let botonCalular = document.getElementById("btnCalcular");
+
+
 botonCalular.addEventListener('click', ()=>{
+    //valido si ingreso datos antes de calcular el prestamo
     const principal = parseInt(document.getElementById('principal').value);
     const interest = parseInt(document.getElementById('interest').value);
     const meses = parseInt(document.getElementById('months').value);
@@ -103,7 +106,6 @@ Toastify({
     text: `Se agrego el Cliente ${nombre}`,
     duration: 3000
     }).showToast();
-    
 
 //una vez que guardo los datos reseteo el formulario
 const form = document.querySelector('#formulario');
@@ -167,31 +169,22 @@ function MostrarListado() {
 const urlDOlarOficial = "https://dolarapi.com/v1/dolares/oficial"
 const urlDOlarBlue = "https://dolarapi.com/v1/dolares/blue"
 
-fetch(urlDOlarOficial)
-  .then(response => response.json())
-  .then(data => {
-    var cuadroDolar = document.getElementById('cuadroDolar1');
-    cuadroDolar.innerHTML = `
-      <h2>Dolar ${data.nombre}</h2>
-      <p>Moneda: ${data.moneda}</p>
-      <p>Compra: ${data.compra}</p>
-      <p>Venta: ${data.venta}</p>
-    `;
-  });
+mostrarDolar(urlDOlarOficial, 'cuadroDolar1')
+mostrarDolar(urlDOlarBlue, 'cuadroDolar2')
 
-
-fetch(urlDOlarBlue)
-  .then(response => response.json())
-  .then(data => {
-    var cuadroDolar = document.getElementById('cuadroDolar2');
-    cuadroDolar.innerHTML = `
-      <h2>Dolar ${data.nombre}</h2>
-      <p>Moneda: ${data.moneda}</p>
-      <p>Compra: ${data.compra}</p>
-      <p>Venta: ${data.venta}</p>
-    `;
-  });
-
+function mostrarDolar(url, id){
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+         var cuadroDolar = document.getElementById(id);
+            cuadroDolar.innerHTML = `
+            <h2>Dolar ${data.nombre}</h2>
+            <p>Moneda: ${data.moneda}</p>
+            <p>Compra: ${data.compra}</p>
+            <p>Venta: ${data.venta}</p>
+            `;
+         });
+}
 
 
 //-------------------------------------------------------------------------------------------------------
